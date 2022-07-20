@@ -20,10 +20,10 @@ export class AppModule {
   //   consumer.apply(Middleware).forRoutes('/admin/*');
   // }
 
-  // configure(consumer: MiddlewareConsumer) {
-  //   consumer.apply(Middleware).exclude('/hello').forRoutes('/*');
-  // }
   configure(consumer: MiddlewareConsumer) {
-    consumer.apply(Middleware).exclude('/api/hello').forRoutes('/*');
+    consumer.apply(Middleware).exclude('/hello').forRoutes('/*');
   }
+  // configure(consumer: MiddlewareConsumer) {
+  //   consumer.apply(Middleware).exclude('/api/hello').forRoutes('/*');
+  // }
 }
