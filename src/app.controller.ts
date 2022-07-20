@@ -5,8 +5,18 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
-  getHello() {
-    return this.appService.getHello();
+  @Get('/hello')
+  async getHello() {
+    return 'hello';
+  }
+
+  @Get('/admin/page')
+  async page() {
+    return '/admin/page';
+  }
+
+  @Get('/admin/component')
+  async component() {
+    return '/admin/component';
   }
 }
