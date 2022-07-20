@@ -23,4 +23,7 @@ export class AppModule {
   configure(consumer: MiddlewareConsumer) {
     consumer.apply(Middleware).exclude('/hello').forRoutes('/*');
   }
+  // configure(consumer: MiddlewareConsumer) {
+  //   consumer.apply(Middleware).exclude('/api/hello').forRoutes('/*');
+  // }
 }
