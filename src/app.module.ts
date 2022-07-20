@@ -16,7 +16,11 @@ class Middleware implements NestMiddleware {
   providers: [AppService],
 })
 export class AppModule {
+  // configure(consumer: MiddlewareConsumer) {
+  //   consumer.apply(Middleware).forRoutes('/admin/*');
+  // }
+
   configure(consumer: MiddlewareConsumer) {
-    consumer.apply(Middleware).forRoutes('/admin/*');
+    consumer.apply(Middleware).exclude('/hello').forRoutes('/*');
   }
 }
